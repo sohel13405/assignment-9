@@ -1,0 +1,59 @@
+[
+    {
+      "id": 1,
+      "thumbnail": "https://i.ibb.co.com/yFyG2Gsj/tech.png",
+      "name": "Tech Innovators Summit",
+      "category": "Tech",
+      "date": "2025-09-10",
+      "location": "San Francisco, CA",
+      "entryFee": "$50"
+    },
+    {
+      "id": 2,
+      "thumbnail": "https://i.ibb.co.com/RTndBqYp/modern.png",
+      "name": "Modern Art Expo",
+      "category": "Art",
+      "date": "2025-10-05",
+      "location": "New York, NY",
+      "entryFee": "Free"
+    },
+    {
+      "id": 3,
+      "thumbnail": "https://i.ibb.co.com/hxZGWx2j/startup.png",
+      "name": "Startup Growth Workshop",
+      "category": "Business",
+      "date": "2025-09-20",
+      "location": "Austin, TX",
+      "entryFee": "$30"
+    },
+    {
+      "id": 4,
+      "thumbnail": "https://i.ibb.co.com/1JhGbx1D/photography.png",
+      "name": "Photography Masterclass",
+      "category": "Photography",
+      "date": "2025-11-12",
+      "location": "Los Angeles, CA",
+      "entryFee": "$100"
+    },
+    { 
+      "id": 5,
+      "thumbnail": "https://i.ibb.co.com/fYq4vHVW/robotic.png",
+      "name": "AI & Robotics Conference",
+      "category": "Tech",
+      "date": "2025-12-01",
+      "location": "Boston, MA",
+      "entryFee": "$150",
+      "button": "View More"
+    },
+    {
+      "id": 6,
+      "thumbnail": "https://i.ibb.co.com/nM32C5CQ/craft.png",
+      "name": "Handmade Crafts Fair",
+      "category": "Art",
+      "date": "2025-09-25",
+      "location": "Seattle, WA",
+      "entryFee": "$10",
+      "button": "View More"
+    }
+  ]
+  
