@@ -8,7 +8,7 @@ const Events = ({data}) => {
 
 
     return (
-        <div className=''>
+        <div className='mb-15'>
             <div className='w-fit md:w-fit lg:w-7x mx-auto mt-10 mb-10'>
             <h1 className='text-3xl font-bold text-[#0da2a0]'>OUR UPCOMING EVENTS</h1>
             </div>

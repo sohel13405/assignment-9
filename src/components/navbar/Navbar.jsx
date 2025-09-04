@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import logo from '../../assets/logo.png'
 
 const Navbar = () => {
@@ -40,7 +40,7 @@ const link = <>
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn btn-accent">Log In</a>
+          <Link to='/auth/login' className="btn btn-accent">Log In</Link>
         </div>
       </div>
       </div>
