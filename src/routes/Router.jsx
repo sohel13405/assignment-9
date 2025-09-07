@@ -8,6 +8,8 @@ import EventDetails from "../pages/eventDetails/EventDetails";
 import AuthLayout from "../layouts/authLayout/AuthLayout";
 import Login from "../pages/login/Login";
 import Register from "../pages/register/Register";
+import PrivateRoute from "../provider/PrivateRoute";
+import Loading from "../components/loading/Loading";
 
 
 const router = createBrowserRouter([
@@ -18,8 +20,8 @@ const router = createBrowserRouter([
       children: [
         {
           index:true,
-          loader: ()=> fetch ('event.json'),
-          
+          loader: ()=> fetch ('/event.json'),
+          hydrateFallbackElement:<Loading></Loading>,
           element: <Home></Home>
           
         },
@@ -33,8 +35,11 @@ const router = createBrowserRouter([
         },
         {
           path:'/eventDetails/:id',
-          element: <EventDetails></EventDetails>,
-          loader: ()=> fetch('event.json'),
+          element: <PrivateRoute>
+            <EventDetails></EventDetails>
+          </PrivateRoute>,
+          loader: ()=> fetch('/event.json'),
+          hydrateFallbackElement:<Loading></Loading>
         },
       ]
       

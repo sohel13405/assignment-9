@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { useLoaderData, useParams } from 'react-router';
 import SingleDetails from '../singleDetails/SingleDetails';
 
+
 const EventDetails = () => {
 
     const {id} = useParams()
     const data = useLoaderData()
     // console.log(id,data)
 
-    const [eventDetails, setEventDetails] = useState([])
+    const [eventDetails, setEventDetails] = useState({})
 
     useEffect(()=> {
         const filteredEvent = data.find((event)=> event.id == id)
@@ -18,11 +19,15 @@ const EventDetails = () => {
 
     },[id , data]);
 
+   
     
 
     return (
-        <div>
-<h1>{eventDetails.name}</h1>
+        <div className=''>
+            
+        <SingleDetails eventDetails={eventDetails}></SingleDetails>
+
+
         </div>
     );
 };

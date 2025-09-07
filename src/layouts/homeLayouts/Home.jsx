@@ -2,6 +2,8 @@ import React from 'react';
 import Slider from './slider/Slider';
 import Events from '../../pages/events/Events';
 import { useLoaderData } from 'react-router';
+import Client from '../../components/client/Client';
+import AmazingFeatures from '../../components/amazingFetures/AmazingFeatures';
 
 const Home = () => {
 
@@ -12,6 +14,8 @@ const Home = () => {
         <div>
             <Slider></Slider>
             <Events data={data}></Events>
+            <Client></Client>
+            <AmazingFeatures></AmazingFeatures>
         </div>
     );
 };
