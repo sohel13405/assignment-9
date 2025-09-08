@@ -15,7 +15,7 @@ const Register = () => {
     const handleRegister = (e) => {
         e.preventDefault();
 
-        console.log(e.target)
+        // console.log(e.target)
         const form = e.target;
         const name = form.name.value;
 
@@ -27,7 +27,7 @@ const Register = () => {
         const email = form.email.value;
         const photo = form.photo.value;
         const password = form.password.value;
-        console.log({ name, email, password, photo });
+        // console.log({ name, email, password, photo });
 
         const hasUppercase = /[A-Z]/.test(password);
         const hasLowercase = /[a-z]/.test(password);
