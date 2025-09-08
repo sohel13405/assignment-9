@@ -19,7 +19,7 @@ const Navbar = () => {
                 icon: "success",
                 title: "You are logged out successfully",
                 showConfirmButton: false,
-                timer: 5000
+                timer: 3000
               });
               navigate('/')
 
@@ -35,7 +35,13 @@ const link = <>
 
 <li><NavLink to='/about' className={({isActive})=> isActive ? " text-[#0da2a0] font-bold" : "text-gray-700"} >About</NavLink></li>
 
-<li><NavLink to='/myprofile' className={({isActive})=> isActive ? " text-[#0da2a0] font-bold" : "text-gray-700"} >My Profile</NavLink></li>
+{
+    user && <>
+    <li><NavLink to='/myprofile' className={({isActive})=> isActive ? " text-[#0da2a0] font-bold" : "text-gray-700"} >My Profile</NavLink></li>
+    </>
+}
+
+
  
 
 

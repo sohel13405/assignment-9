@@ -20,7 +20,7 @@ const handleSubmit = (e) =>{
       
 }
 
-    const {thumbnail,category,name,date,location,entryFee,id}= eventDetails;
+    const {thumbnail,category,name,date,location,entryFee}= eventDetails;
 
 
     return (

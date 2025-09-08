@@ -2,11 +2,14 @@ import React, { use, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { AuthContext } from '../../provider/AuthProvider';
 import Swal from 'sweetalert2';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 const Register = () => {
     const { createUser, setUser, updateUser } = use(AuthContext);
     const [nameError, setNameError] = useState(' ')
     const [passwordError, setPasswordError] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
+
     const navigate = useNavigate()
 
     const handleRegister = (e) => {
@@ -55,7 +58,7 @@ const Register = () => {
                     icon: "success",
                     title: "Congratulations",
                     showConfirmButton: false,
-                    timer: 5000
+                    timer: 3000
                 });
                 updateUser({ displayName: name, photoURL: photo })
                     .then(() => {
@@ -100,8 +103,22 @@ const Register = () => {
                             <input name="email" type="email" className="input" placeholder="Email" required />
 
                             <label className="label">Password</label>
-                            <input name="password" type="password" className="input" placeholder="Password" required />
-                            {passwordError && <p className="text-error">{passwordError}</p>}
+                            <div className="relative">
+                                <input
+                                    name="password"
+                                    type={showPassword ? 'text' : 'password'} 
+                                    className="input w-full pr-10"
+                                    placeholder="Password"
+                                    required
+                                />
+                                <span
+                                    className="absolute right-3 top-3 cursor-pointer text-gray-500"
+                                    onClick={() => setShowPassword(!showPassword)}   
+                                >
+                                    {showPassword ? <FaEyeSlash /> : <FaEye />}     
+                                </span>
+                            </div>
+
 
                             <button type="submit" className="btn hover:bg-[#0da29fb0] text-white bg-[#0da2a0] mt-4">
                                 Register
@@ -111,6 +128,8 @@ const Register = () => {
                                 Already Have An Account?{' '}
                                 <Link className="text-red-500" to="/auth/login">Login</Link>
                             </p>
+
+
                         </fieldset>
                     </form>
                 </div>
