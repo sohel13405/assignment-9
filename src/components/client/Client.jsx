@@ -1,4 +1,5 @@
 import React from "react";
+import { FaQuoteLeft } from "react-icons/fa";
 
 const Client = () => {
   const reviews = [
@@ -29,26 +30,33 @@ const Client = () => {
   ];
 
   return (
-    <div className="my-12 px-4 md:px-10 lg:px-20">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#0da2a0]">
-        What Our Clients Say
+    <div className="my-16 px-6 md:px-14 lg:px-20">
+      <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-12 text-gray-800">
+        💬 What Our Clients Say
       </h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {reviews.map(({ id, name, photo, text }) => (
           <div
             key={id}
-            className="card bg-white shadow-md p-6 flex flex-col md:flex-row items-center gap-4 rounded-2xl"
+            className="relative bg-white border-2 border-transparent bg-clip-padding rounded-2xl shadow-lg p-6 flex flex-col gap-4 hover:shadow-xl transition-all duration-300"
+            style={{
+              borderImage:
+                "linear-gradient(90deg, #0da2a0, #1fc8b5, #4facfe) 1",
+            }}
           >
-            <img
-              src={photo}
-              alt={name}
-              className="w-20 h-20 rounded-full object-cover border-2 border-[#0da2a0]"
-            />
-            <div>
-              <h3 className="text-lg font-semibold">{name}</h3>
-              <p className="text-gray-600 mt-2">{text}</p>
+            <FaQuoteLeft className="absolute -top-4 -left-3 text-4xl text-[#0da2a0]/30" />
+
+            <div className="flex items-center gap-4">
+              <img
+                src={photo}
+                alt={name}
+                className="w-16 h-16 rounded-full object-cover border-2 border-[#0da2a0]"
+              />
+              <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
             </div>
+
+            <p className="text-gray-600 leading-relaxed text-base">“{text}”</p>
           </div>
         ))}
       </div>

@@ -14,8 +14,9 @@ const Home = () => {
         <div>
             <Slider></Slider>
             <Events data={data}></Events>
-            <Client></Client>
             <AmazingFeatures></AmazingFeatures>
+            <Client></Client>
+            
         </div>
     );
 };
